@@ -58,11 +58,11 @@ test.describe("configured integrations with mocked providers", () => {
 
       await page.goto(`${baseUrl}/free-fridge-sheet`);
       const email = page.getByRole("form", {
-        name: "Make room for a little peace of mind.",
+        name: "Keep in touch, if you’d like.",
       });
       await expect(email).toHaveAttribute("method", "post");
       await expect(
-        email.getByRole("button", { name: "Send me the free sheet" }),
+        email.getByRole("button", { name: "Sign up for emails" }),
       ).toBeDisabled();
       await expect(email.getByLabel("Your email address")).toBeDisabled();
       await expect(
@@ -96,10 +96,10 @@ test.describe("configured integrations with mocked providers", () => {
       });
       await page.goto(`${baseUrl}/free-fridge-sheet`);
       const form = page.getByRole("form", {
-        name: "Make room for a little peace of mind.",
+        name: "Keep in touch, if you’d like.",
       });
       const email = form.getByLabel("Your email address");
-      const button = form.getByRole("button", { name: "Send me the free sheet" });
+      const button = form.getByRole("button", { name: "Sign up for emails" });
 
       await email.fill("not-an-email");
       await button.click();
@@ -147,18 +147,18 @@ test.describe("configured integrations with mocked providers", () => {
       });
       await page.goto(`${baseUrl}/free-fridge-sheet`);
       const form = page.getByRole("form", {
-        name: "Make room for a little peace of mind.",
+        name: "Keep in touch, if you’d like.",
       });
       const email = form.getByLabel("Your email address");
       await email.fill("family@example.test");
       await form.getByRole("checkbox").check();
-      await form.getByRole("button", { name: "Send me the free sheet" }).click();
+      await form.getByRole("button", { name: "Sign up for emails" }).click();
       await expect(form.getByRole("alert")).toContainText("could not send your request");
       await expect(email).toHaveValue("family@example.test");
       await expect(
         form.getByRole("link", { name: /Open the Parent's Fridge Sheet/ }),
       ).toHaveCount(0);
-      await form.getByRole("button", { name: "Send me the free sheet" }).click();
+      await form.getByRole("button", { name: "Sign up for emails" }).click();
       await expect(form.getByRole("status")).toContainText("Your request was received");
       expect(requests).toBe(2);
     });

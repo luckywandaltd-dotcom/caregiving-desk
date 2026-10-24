@@ -1,3 +1,5 @@
+import { fridgeSheet } from "@/content/resources";
+
 /** Public, build-time integration settings. Never put API secrets in NEXT_PUBLIC variables. */
 export function safeHttpsUrl(value: string | undefined): string | undefined {
   if (!value || value.includes("PLACEHOLDER")) return undefined;
@@ -16,7 +18,7 @@ export const integrations = {
   emailField: process.env.NEXT_PUBLIC_EMAIL_FIELD_NAME || "email",
   emailMode: process.env.NEXT_PUBLIC_EMAIL_FORM_MODE === "json" ? "json" : "native",
   hostedSignup: safeHttpsUrl(process.env.NEXT_PUBLIC_EMAIL_SIGNUP_URL),
-  fridgeSheet: process.env.NEXT_PUBLIC_FRIDGE_SHEET_URL || "PLACEHOLDER_FRIDGE_SHEET_URL",
+  fridgeSheet: safeHttpsUrl(process.env.NEXT_PUBLIC_FRIDGE_SHEET_URL) || fridgeSheet.href,
   contactEndpoint: safeHttpsUrl(process.env.NEXT_PUBLIC_CONTACT_FORM_ENDPOINT),
 } as const;
 

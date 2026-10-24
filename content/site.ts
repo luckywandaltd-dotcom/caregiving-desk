@@ -31,8 +31,6 @@ export const site = {
       height: 1280,
     },
   },
-  fridgeSheetUrl:
-    process.env.NEXT_PUBLIC_FRIDGE_SHEET_URL || "PLACEHOLDER_FRIDGE_SHEET_URL",
   socials: [
     {
       name: "Instagram",

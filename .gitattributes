@@ -1,0 +1,2 @@
+# Preserve printable files byte-for-byte across platforms.
+*.pdf binary

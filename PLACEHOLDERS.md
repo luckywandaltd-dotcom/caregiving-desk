@@ -11,11 +11,12 @@ The codebase includes intentional launch placeholders. A successful build does n
 
 ## Free Parent's Fridge Sheet and email signup
 
-- [ ] Create and review the actual two-page PDF, including key health information, medicine-list spaces, and emergency contacts. The illustration is a preview placeholder, not a downloadable product.
-- [ ] Replace `PLACEHOLDER_FRIDGE_SHEET_URL` using `NEXT_PUBLIC_FRIDGE_SHEET_URL` with the final public resource or delivery URL.
-- [ ] Choose ConvertKit/Kit, MailerLite, another supported form endpoint, or a hosted/free Gumroad product. Set the public action or hosted signup URL, submission mode, and correct email field name.
-- [ ] Configure and test consent, confirmation, welcome/delivery automation, unsubscribe links, sender details, and any required provider-specific fields. No real subscription or email delivery is available while these URLs are empty.
-- [ ] Confirm whether the sheet is publicly downloadable or delivered by the provider; a public environment variable cannot protect a file.
+- [x] Add the supplied original at `public/downloads/parents-care-information-printable.pdf`: two blank A4 pages for parent details, allergies, contacts, medicines, and supplements. It is a print-and-complete resource, not an electronically fillable form.
+- [x] Provide a direct free download with no signup required. `NEXT_PUBLIC_FRIDGE_SHEET_URL` is an optional valid HTTPS override; empty or invalid values use the packaged PDF. The user confirmed the printable is free for now; this does not finalize any paid-product prices.
+- [x] Replace the illustrative preview with a faithful first-page rendering at `public/images/fridge-sheet-preview.png`, used on Home and the free-sheet page.
+- [ ] Review the supplied printable's content and suitability before launch. Supplying the file does not establish medical or legal review. The original PDF is untagged; assess PDF accessibility and provide an accessible alternative as needed without claiming conformance based on website checks.
+- [ ] If enabling optional email signup, choose ConvertKit/Kit, MailerLite, another supported form endpoint, or a hosted signup page. Set the public action or hosted signup URL, submission mode, and correct email field name. Signup is independent of the download.
+- [ ] Before enabling signup, configure and test consent, confirmation, unsubscribe links, sender details, any required provider-specific fields, and any optional welcome/delivery automation. No real subscription or email delivery is available while these URLs are empty; the free direct download still works.
 
 ## Five planned products
 
@@ -58,7 +59,7 @@ The user has supplied and approved AI-generated brand images for Dr. Bennett, Ge
 - Active images are `characters-outdoors.jpg` on Home, `dr-bennett-portrait.jpg` in “Meet Dr. Bennett,” and `characters-clinic.jpg` on About. Their paths, alt text, and dimensions are editable through `site.images` in `content/site.ts`.
 - The supplied `dr-bennett-outdoors.jpg` and `characters-conversation.jpg` originals are retained for future use; they are not missing launch assets.
 - [ ] Keep the AI-generated nature clear beside character images, including the fictional clinic scenes.
-- [ ] `fridge-sheet.svg`: replace the illustrative layout with a faithful preview of the completed two-page sheet.
+- [x] Replace `fridge-sheet.svg` with `fridge-sheet-preview.png`, a faithful first-page preview of the supplied two-page printable.
 - [ ] Product covers: `product-binder.svg`, `product-documents.svg`, `product-chair.svg`, `product-moving.svg`, `product-home.svg`.
 - [ ] Tip artwork: `tip-chair.svg`, `tip-kitchen.svg`, `tip-caregiver.svg`.
 - [ ] Default Open Graph/Twitter image placeholder `public/images/og-default.png` (1200 × 630): review the final artwork and verify real social previews. Metadata uses `/images/og-default.png`; preserve the path or update the metadata after replacement.

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useId, useState, type FormEvent } from "react";
-import { integrations, postJsonForm, safeHttpsUrl } from "@/lib/integrations";
+import { integrations, postJsonForm } from "@/lib/integrations";
 import { useHydrated } from "@/lib/use-hydrated";
 
 type EmailSignupProps = {
@@ -26,7 +26,7 @@ export function EmailSignup({
   const configured = Boolean(integrations.emailAction);
   const hydrated = useHydrated();
   const ready = integrations.emailMode === "native" || hydrated;
-  const sheetUrl = safeHttpsUrl(integrations.fridgeSheet);
+  const sheetUrl = integrations.fridgeSheet;
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     const form = event.currentTarget;

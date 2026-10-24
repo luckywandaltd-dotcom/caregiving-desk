@@ -14,7 +14,7 @@ cp .env.example .env.local
 npm run dev
 ```
 
-Visit the address printed by Next.js. The application runs without provider configuration; unavailable signup, download, and contact features say so instead of pretending to work. Copy `.env.example` only if `.env.local` does not already exist. In a cloud environment with an unwritable home cache, prefix npm commands with `npm_config_cache=/workspace/.cache/npm`.
+Visit the address printed by Next.js. The application runs without provider configuration; the free printable downloads directly, while unavailable signup and contact features say so instead of pretending to work. Copy `.env.example` only if `.env.local` does not already exist. In a cloud environment with an unwritable home cache, prefix npm commands with `npm_config_cache=/workspace/.cache/npm`.
 
 Production and quality commands:
 
@@ -37,8 +37,10 @@ content/site.ts       Brand details, social links, disclaimer, trusted organizat
 content/products.ts   Product data and product-specific FAQs
 content/tips.ts       Categories and editable tip articles
 content/faqs.ts       General frequently asked questions
+content/resources.ts Free printable path, filename, and preview dimensions
 lib/                  SEO and integration helpers
 public/images/        Approved AI character images, vector previews, and social image
+public/downloads/     User-supplied free printable PDF
 tailwind.config.ts    Design tokens, loaded by the Tailwind @config directive
 ```
 
@@ -56,7 +58,7 @@ Edit the active character image paths, alt text, and original dimensions in `sit
 
 The other two supplied originals are retained in `public/images/` for future use: `dr-bennett-outdoors.jpg` (720 × 1280) and `characters-conversation.jpg` (1920 × 1280). All five JPEG files preserve the supplied originals; `next/image` generates optimized delivery formats, while responsive page styles control their visible framing. When replacing an image, update its path, accurate dimensions, and alt text together. The adjacent disclosure text lives in `site.characterImageDisclosure` and `site.presenterImageDisclosure`.
 
-Product covers, tip artwork, the Fridge Sheet preview, and the default social card remain separate, replaceable placeholders. See `PLACEHOLDERS.md` for what still needs review before launch.
+The Fridge Sheet preview at `public/images/fridge-sheet-preview.png` is a faithful rendering of the supplied PDF's first page, used on Home and the free-sheet page. Product covers, tip artwork, and the default social card remain separate, replaceable placeholders. See `PLACEHOLDERS.md` for what still needs review before launch.
 
 ## Edit a product
 
@@ -94,7 +96,9 @@ The email form supports these options:
 
 For **ConvertKit (Kit)** or **MailerLite**, use the public action or hosted signup URL from the provider's form builder. Some forms use `email_address` or `fields[email]`, but the generated form is the authority. If the provider requires extra hidden fields, scripts, anti-bot tokens, or its own consent flow, use the hosted signup option rather than guessing its API. For a **free Gumroad product**, use the product's public hosted URL; Gumroad owns that checkout and delivery flow. No provider's private API is called by this site.
 
-Create the actual two-page Parent's Fridge Sheet PDF before launch. Set `NEXT_PUBLIC_FRIDGE_SHEET_URL` to its public resource or hosted delivery URL; the default is the inert `PLACEHOLDER_FRIDGE_SHEET_URL`. To deliver the sheet only after signup, configure your email provider's confirmation/welcome automation or hosted product delivery. A public frontend URL is not access control and should not contain sensitive information. Test confirmation, consent, unsubscribe, and delivery with your chosen provider before launch.
+The user-supplied original is available at `public/downloads/parents-care-information-printable.pdf`. It contains two blank A4 pages: “Parent's Care Information” and “Medicines & Supplements.” The site provides a direct free download without requiring signup. It is a print-and-complete PDF, not an electronically fillable form; it is untagged, and PDF accessibility conformance has not been established. Preserve the original file and the separate first-page preview when updating the site.
+
+Leave `NEXT_PUBLIC_FRIDGE_SHEET_URL` empty to use the packaged PDF. A valid public HTTPS URL optionally overrides that default; an invalid value falls back to the packaged file. A public frontend URL is not access control and should not contain sensitive information. Email signup is independent and optional: it remains unavailable until a provider is configured, and downloading does not create a subscription. Test confirmation, consent, unsubscribe, and any optional email delivery with your chosen provider before enabling signup.
 
 ## Contact form
 

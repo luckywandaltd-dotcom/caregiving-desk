@@ -1,5 +1,18 @@
 # Validation results
 
+## Free printable update — October 25, 2026
+
+Added the user-supplied `Parents_Care_Information_Printable.pdf` as the free Parent's Fridge Sheet. The original two-page A4 PDF is retained byte-for-byte at `public/downloads/parents-care-information-printable.pdf` (68,394 bytes; SHA-256 `49b9bec13d9cbfa0f6c5d5d93279ee99012b4ca8c93a9172400d6c1b4528727b`). Both pages were inspected: they are blank print-and-complete templates, with no completed personal information. The first-page preview replaces the placeholder on Home and the free-sheet page. Downloading requires neither email signup nor JavaScript. The user's latest clarification keeps this resource free; paid-product prices and availability are unchanged.
+
+- `npm run lint`, `npm run build`, `npm run typecheck`, `npm run format:check`, and `git diff --check`: passed.
+- Affected production browser checks: **15 passed, 1 intentionally skipped** (duplicate mobile metadata/HTTP check). Coverage includes Home/free-sheet layout, site metadata and local assets, unavailable forms, keyboard navigation, and native PDF downloads at desktop/mobile sizes with JavaScript disabled. HTTP and downloaded bytes both match the packaged original.
+- **Four axe WCAG 2.1 AA scans** across Home/free-sheet at desktop/mobile sizes: zero violations. These test the website, not the PDF. The supplied PDF is untagged; no accessible-PDF conformance is claimed.
+- Additional preview/layout checks at **320px, 390px, and 1440px**: images loaded, no horizontal overflow, and no browser runtime errors. Desktop/mobile screenshots were visually inspected.
+- Affected mock-provider integration checks: **6 passed** across desktop/mobile (no-JavaScript form safeguards, email validation/consent and success, failure/retry, and the HTTPS download override). These were mocked responses, not live subscriptions or email delivery.
+- Lighthouse mobile on `/free-fridge-sheet`: **95/100/100/100** for Performance, Accessibility, Best Practices, and SEO. Reports are in `/tmp/caregiving-free-pdf-lighthouse/` in this cloud instance.
+
+Deployment prerequisites were rechecked during this update: `VERCEL_TOKEN` is absent, its draft requirement has no saved credential binding, and the running environment has no Vercel network rules. The previously denied Vercel API operation was not retried without a relevant access change. No live deployment is established. The GitHub check-runs API was previously unavailable (Forbidden); these are local checks, not claims of hosted CI success. Remaining product files, checkout links, provider setup, production domain, tip content, and legal review are tracked in [PLACEHOLDERS.md](./PLACEHOLDERS.md).
+
 ## Character image update — October 25, 2026
 
 Replaced the Home hero, presenter illustration, and About illustration with the user-approved AI-generated character images. All five supplied JPEG originals are retained byte-for-byte, including two reserve assets. The three active images have descriptive alt text and adjacent AI disclosures; the exact footer medical disclaimer is unchanged.

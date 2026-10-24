@@ -194,7 +194,13 @@ test("every page has distinct metadata, valid local links, and a sitemap entry",
   expect(ogImage.headers()["content-type"]).toMatch(/^image\//);
 });
 
-for (const route of ["/", "/shop", productRoutes[0], tipRoutes[0]]) {
+for (const route of [
+  "/",
+  "/free-fridge-sheet",
+  "/shop",
+  productRoutes[0],
+  tipRoutes[0],
+]) {
   test(`${route} meets automated WCAG 2.1 AA checks`, async ({ page }) => {
     await page.goto(route);
     await page.evaluate(() => document.fonts.ready);

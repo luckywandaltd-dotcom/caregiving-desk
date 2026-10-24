@@ -7,6 +7,7 @@ import { EmailSignup } from "@/components/email-signup";
 import { products } from "@/content/products";
 import { tips } from "@/content/tips";
 import { site } from "@/content/site";
+import { fridgeSheet } from "@/content/resources";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata(
@@ -217,10 +218,10 @@ export default function HomePage() {
             </div>
             <div className="relative mx-auto max-w-xs">
               <Image
-                src="/images/fridge-sheet.svg"
-                alt="Illustrated preview placeholder of the two-page Parent’s Fridge Sheet, with blank health information and contact fields."
-                width={680}
-                height={840}
+                src={fridgeSheet.preview}
+                alt="Preview of page 1 of the free Parent’s Care Information printable, with blank spaces for care details, allergies, and contacts."
+                width={fridgeSheet.previewWidth}
+                height={fridgeSheet.previewHeight}
                 className="h-auto max-h-80 w-auto"
                 sizes="320px"
               />
