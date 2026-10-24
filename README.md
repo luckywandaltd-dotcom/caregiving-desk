@@ -38,11 +38,25 @@ content/products.ts   Product data and product-specific FAQs
 content/tips.ts       Categories and editable tip articles
 content/faqs.ts       General frequently asked questions
 lib/                  SEO and integration helpers
-public/images/        Local, replaceable illustrations and social-image placeholder
+public/images/        Approved AI character images, vector previews, and social image
 tailwind.config.ts    Design tokens, loaded by the Tailwind @config directive
 ```
 
 Fonts are provided locally through `next/font` and the installed font packages, so rendering does not require visitors to contact a font service. Images use `next/image`. Keep body text at least 18px, controls at least 48px, visible keyboard focus, and WCAG AA contrast when changing the design.
+
+## Character imagery
+
+The supplied character images were confirmed by the user as AI-generated brand artwork. Dr. Bennett, George, and Margaret are fictional characters; the clinic scenes do not show actual consultations or patients. Keep the visible AI disclosure beside realistic character images, their descriptive alt text, and the exact site-wide education-only disclaimer when editing their presentation.
+
+Edit the active character image paths, alt text, and original dimensions in `site.images` in `content/site.ts`:
+
+- `hero`: `/images/characters-outdoors.jpg` (720 × 1280), the outdoor group scene on Home.
+- `presenter`: `/images/dr-bennett-portrait.jpg` (1086 × 1448), the portrait in “Meet Dr. Bennett.”
+- `about`: `/images/characters-clinic.jpg` (720 × 1280), the character introduction on About.
+
+The other two supplied originals are retained in `public/images/` for future use: `dr-bennett-outdoors.jpg` (720 × 1280) and `characters-conversation.jpg` (1920 × 1280). All five JPEG files preserve the supplied originals; `next/image` generates optimized delivery formats, while responsive page styles control their visible framing. When replacing an image, update its path, accurate dimensions, and alt text together. The adjacent disclosure text lives in `site.characterImageDisclosure` and `site.presenterImageDisclosure`.
+
+Product covers, tip artwork, the Fridge Sheet preview, and the default social card remain separate, replaceable placeholders. See `PLACEHOLDERS.md` for what still needs review before launch.
 
 ## Edit a product
 

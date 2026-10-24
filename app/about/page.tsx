@@ -51,18 +51,18 @@ export default function AboutPage() {
               caregiving.
             </p>
           </div>
-          <figure className="overflow-hidden rounded-[2rem] bg-sage p-6 sm:p-10">
+          <figure className="overflow-hidden rounded-[2rem] border border-border bg-paper">
             <Image
-              src="/images/couple.svg"
-              alt="Illustration of George and Margaret, Caregiving Desk’s fictional older couple."
-              width={600}
-              height={600}
-              className="h-auto w-full"
+              src={site.images.about.src}
+              alt={site.images.about.alt}
+              width={site.images.about.width}
+              height={site.images.about.height}
+              className="aspect-[4/5] w-full object-cover object-[50%_40%]"
               sizes="(max-width: 1023px) 90vw, 40vw"
-              priority
+              preload
             />
-            <figcaption className="mt-4 text-center leading-relaxed text-muted">
-              George &amp; Margaret · fictional illustrated characters
+            <figcaption className="px-5 py-4 text-center leading-relaxed text-muted">
+              {site.characterImageDisclosure}
             </figcaption>
           </figure>
         </div>
@@ -81,9 +81,9 @@ export default function AboutPage() {
               name, not a medical credential.
             </p>
             <p className="mt-5 leading-relaxed text-muted">
-              George and Margaret are a fictional older couple who appear alongside him in
-              illustrated stories and videos. Their stories are examples, not testimonials
-              or accounts of real patients.
+              George and Margaret are AI-generated fictional characters who appear
+              alongside him in stories and videos. These scenes do not show real
+              consultations or patients. Their stories are examples, not testimonials.
             </p>
             <p className="mt-6 rounded-2xl border border-border bg-paper p-6 leading-relaxed">
               {site.disclaimer}

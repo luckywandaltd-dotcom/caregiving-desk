@@ -7,12 +7,12 @@
 - Keep shared UI in `components/`, helpers in `lib/`, and page routes in `app/`.
 - Product entries belong in `content/products.ts`, tips and categories in `content/tips.ts`, general FAQs in `content/faqs.ts`, and brand/social/disclaimer content in `content/site.ts`.
 - New content entries should create their cards and routes without component edits. Keep slugs unique. Generate static params, metadata, structured data, and sitemap entries from content.
-- Keep images local in `public/images/`, use `next/image`, and write meaningful alt text. Use illustrations, not photos of real identifiable people. Use `next/font` with locally installed fonts.
+- Keep images local in `public/images/`, use `next/image`, and write meaningful alt text. The user has approved the supplied AI-generated character images; they depict fictional people, not real identifiable people. Keep a readable AI disclosure beside realistic character images and identify their AI-generated nature in alt text. Use `next/font` with locally installed fonts.
 - Do not add a CMS, database, on-site card fields, or heavy UI libraries without a clear task requirement. Purchases use external checkout URLs.
 
 ## Content rules
 
-- Caregiving Desk is owned by Voice Of Peshawar LLC. Dr. Bennett is an AI virtual presenter, not a real or licensed doctor. George and Margaret are fictional characters. Never imply actual clinical credentials, patients, endorsements, or testimonials, including in metadata and JSON-LD.
+- Caregiving Desk is owned by Voice Of Peshawar LLC. Dr. Bennett is an AI virtual presenter, not a real or licensed doctor. George and Margaret are AI-generated fictional characters. Their clinic and outdoor scenes are fictional, not photographs of real consultations or patients. Never imply actual clinical credentials, patients, endorsements, or testimonials, including in metadata and JSON-LD.
 - Content is education only. Do not diagnose, promise cures or miracle outcomes, use scare language, or advise someone to stop or change medicine. Tell readers to discuss personal health decisions with their doctor or pharmacist.
 - Use exact, relevant CDC, NIH, NIA, Mayo Clinic, or NHS source pages for health statements. Do not invent facts, statistics, sources, quotations, reviews, ratings, credentials, or sales figures.
 - Mark missing material with an obvious `PLACEHOLDER`. Keep the exact “EXAMPLE CONTENT – replace before launch” label on sample tips. A sample date is not proof of medical review.

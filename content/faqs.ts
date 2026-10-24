@@ -12,7 +12,7 @@ export const faqs: FAQ[] = [
   {
     question: "Is Dr. Bennett a real doctor?",
     answer:
-      "No. Dr. Bennett is an AI virtual presenter, not a real person or a licensed doctor. George and Margaret are fictional illustrated characters, too.",
+      "No. Dr. Bennett is an AI virtual presenter, not a real person or a licensed doctor. George and Margaret are AI-generated fictional characters, too. Their images do not show real patients, consultations, or testimonials.",
   },
   {
     question: "Will you send me a physical product?",

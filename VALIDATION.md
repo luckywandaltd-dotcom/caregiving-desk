@@ -1,6 +1,20 @@
 # Validation results
 
-Validated on October 24, 2026 in the cloud workspace using Node.js 24.19.0 and the local production build. The application is implemented; the intentional content, product, and provider placeholders in [PLACEHOLDERS.md](./PLACEHOLDERS.md) still need attention before public launch.
+## Character image update — October 25, 2026
+
+Replaced the Home hero, presenter illustration, and About illustration with the user-approved AI-generated character images. All five supplied JPEG originals are retained byte-for-byte, including two reserve assets. The three active images have descriptive alt text and adjacent AI disclosures; the exact footer medical disclaimer is unchanged.
+
+- `npm run lint`, `npm run build`, `npx tsc --noEmit`, and `npm run format:check`: passed.
+- Affected existing Playwright checks: **11 passed, 1 intentionally skipped** (duplicate mobile metadata/HTTP test). These cover Home/About rendering, site metadata and image responses, keyboard focus, legal disclosures, and Home accessibility.
+- Additional browser checks: the active images decoded successfully on Home/About at **320px, 390px, and 1440px**, with no horizontal overflow or browser runtime errors. Screenshots were visually inspected for framing and readable disclosures.
+- **Four axe WCAG 2.1 AA scans** across Home/About at mobile and desktop sizes reported zero violations.
+- Lighthouse mobile: **Home 97/100/100/100; About 99/100/100/100** for Performance, Accessibility, Best Practices, and SEO respectively. Reports are in `/tmp/caregiving-images-lighthouse/` in this cloud instance.
+
+The running environment still has no `VERCEL_TOKEN` binding and no applied Vercel network rules. The earlier Vercel API request was denied; that denied request was not repeated without a relevant access change. This image update does not establish a live deployment. Actual products/PDFs, prices, checkout links, provider endpoints, the production domain, reviewed tips, and reviewed legal text remain launch prerequisites in [PLACEHOLDERS.md](./PLACEHOLDERS.md).
+
+## Initial website verification — October 24, 2026
+
+The results below record the initial website validation, before the character image update, using Node.js 24.19.0 and the local production build. They remain historical evidence for the initial implementation rather than new runs of unchanged checks.
 
 ## Build and code checks
 

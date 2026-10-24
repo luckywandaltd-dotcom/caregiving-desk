@@ -7,7 +7,7 @@ The codebase includes intentional launch placeholders. A successful build does n
 - [ ] Set `NEXT_PUBLIC_SITE_URL` to the actual HTTPS site origin. Replace the `https://example.com` fallback for canonical URLs, sitemap, structured data, and social metadata.
 - [ ] Verify Voice Of Peshawar LLC's business details and the public brand description in `content/site.ts`.
 - [ ] Confirm the supplied social handles and their destinations: Instagram `@caregivingdesk`, X `@caregiverdesk`, TikTok `@luckywandallc`, YouTube `@Caregivingdesk`.
-- [ ] Keep Dr. Bennett's AI-presenter disclosure everywhere. George and Margaret are fictional illustrated characters, not testimonials.
+- [ ] Keep Dr. Bennett's AI-presenter disclosure everywhere. George and Margaret are AI-generated fictional characters, not real patients or people giving testimonials.
 
 ## Free Parent's Fridge Sheet and email signup
 
@@ -50,16 +50,19 @@ All initial tips carry **EXAMPLE CONTENT – replace before launch**. None suppl
 - [ ] Only set `example: false` after content and source review. Do not invent statistics, stories presented as real, testimonials, credentials, or quotations.
 - [ ] If adding an optional `embedUrl`, confirm ownership/permission, public availability, embed support, no autoplay, and that the visible description matches the real video/post.
 
-## Illustrations and social preview
+## Character images, remaining previews, and social image
 
-All illustrations are intentionally replaceable local artwork. They depict no real identifiable person. Review them for brand fit, accessibility, and suitability; retain or replace them with approved artwork before launch. Update the associated alt text when changing an image.
+The user has supplied and approved AI-generated brand images for Dr. Bennett, George, and Margaret. Their realistic appearance does not represent actual medical credentials, patients, consultations, or testimonials. Preserve the visible AI disclosures and accurate alt text when using them.
 
-- [ ] Hero illustration (`hero-caregiving.svg`) and character artwork (`presenter.svg` and `couple.svg`) in `public/images/`.
+- [x] Replace the character illustration placeholders with the user-approved AI-generated images.
+- Active images are `characters-outdoors.jpg` on Home, `dr-bennett-portrait.jpg` in “Meet Dr. Bennett,” and `characters-clinic.jpg` on About. Their paths, alt text, and dimensions are editable through `site.images` in `content/site.ts`.
+- The supplied `dr-bennett-outdoors.jpg` and `characters-conversation.jpg` originals are retained for future use; they are not missing launch assets.
+- [ ] Keep the AI-generated nature clear beside character images, including the fictional clinic scenes.
 - [ ] `fridge-sheet.svg`: replace the illustrative layout with a faithful preview of the completed two-page sheet.
 - [ ] Product covers: `product-binder.svg`, `product-documents.svg`, `product-chair.svg`, `product-moving.svg`, `product-home.svg`.
 - [ ] Tip artwork: `tip-chair.svg`, `tip-kitchen.svg`, `tip-caregiver.svg`.
 - [ ] Default Open Graph/Twitter image placeholder `public/images/og-default.png` (1200 × 630): review the final artwork and verify real social previews. Metadata uses `/images/og-default.png`; preserve the path or update the metadata after replacement.
-- [ ] Do not replace fictional character illustrations with photos of real identifiable people.
+- [ ] Do not substitute photos of real identifiable people for the approved fictional characters.
 
 ## Contact and privacy
 

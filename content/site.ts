@@ -6,7 +6,31 @@ export const site = {
   disclaimer:
     "Dr. Bennett is an AI virtual presenter. Content is for education only and is not medical advice. Always talk to your doctor or pharmacist about your health.",
   presenterDisclosure:
-    "Dr. Bennett is an AI virtual presenter, not a real person or a licensed doctor. George and Margaret are fictional illustrated characters. They help tell our stories; they are not patients or people giving testimonials.",
+    "Dr. Bennett is an AI virtual presenter, not a real person or a licensed doctor. George and Margaret are AI-generated fictional characters. Their images depict fictional scenes, not real patients, consultations, or testimonials.",
+  characterImageDisclosure:
+    "AI-generated fictional characters. Dr. Bennett is not a real or licensed doctor.",
+  presenterImageDisclosure:
+    "AI-generated portrait of a virtual presenter, not a real or licensed doctor.",
+  images: {
+    hero: {
+      src: "/images/characters-outdoors.jpg",
+      alt: "AI-generated scene of Dr. Bennett, George, and Margaret, fictional characters standing together outdoors.",
+      width: 720,
+      height: 1280,
+    },
+    presenter: {
+      src: "/images/dr-bennett-portrait.jpg",
+      alt: "AI-generated portrait of Dr. Bennett, a fictional virtual presenter wearing glasses and a white coat, not a real or licensed doctor.",
+      width: 1086,
+      height: 1448,
+    },
+    about: {
+      src: "/images/characters-clinic.jpg",
+      alt: "AI-generated scene of Dr. Bennett, George, and Margaret, fictional characters standing together in a clinic setting, not real patients or a consultation.",
+      width: 720,
+      height: 1280,
+    },
+  },
   fridgeSheetUrl:
     process.env.NEXT_PUBLIC_FRIDGE_SHEET_URL || "PLACEHOLDER_FRIDGE_SHEET_URL",
   socials: [

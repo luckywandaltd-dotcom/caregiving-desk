@@ -50,16 +50,16 @@ export default function HomePage() {
                 Simple language. Thoughtful tools. Education only.
               </p>
             </div>
-            <div className="relative mx-auto w-full max-w-xl lg:pl-2">
-              <div className="overflow-hidden rounded-t-[45%] rounded-b-[28px] bg-sage">
+            <figure className="relative mx-auto w-full max-w-xl lg:pl-2">
+              <div className="overflow-hidden rounded-[1.75rem] bg-sage">
                 <Image
-                  src="/images/hero-caregiving.svg"
-                  alt="An original illustration of fictional older couple George and Margaret sharing a quiet moment at home."
-                  width={800}
-                  height={800}
+                  src={site.images.hero.src}
+                  alt={site.images.hero.alt}
+                  width={site.images.hero.width}
+                  height={site.images.hero.height}
                   preload
                   sizes="(max-width: 1023px) 90vw, 42vw"
-                  className="h-auto w-full"
+                  className="aspect-square w-full object-cover object-[50%_40%]"
                 />
               </div>
               <div className="relative mx-5 -mt-10 rounded-xl border border-border bg-paper px-6 py-5 shadow-[0_8px_30px_-15px_#273b3225] sm:mx-8">
@@ -70,10 +70,13 @@ export default function HomePage() {
                   A little care is a good place to start.
                 </p>
               </div>
-              <p className="mt-4 text-center text-[18px] text-muted">
-                George &amp; Margaret · our illustrated companions
-              </p>
-            </div>
+              <figcaption className="mt-4 text-center text-[18px] text-muted">
+                <span className="mb-1 block font-bold text-forest">
+                  Dr. Bennett, George &amp; Margaret
+                </span>
+                {site.characterImageDisclosure}
+              </figcaption>
+            </figure>
           </div>
         </Container>
       </Section>
@@ -127,19 +130,19 @@ export default function HomePage() {
       <Section className="border-y border-border bg-[#eeeee5]">
         <Container>
           <div className="grid items-center gap-10 md:grid-cols-[0.8fr_1.2fr] lg:gap-20">
-            <div className="relative mx-auto w-full max-w-sm overflow-hidden rounded-t-[45%] rounded-b-2xl bg-[#dce5d5]">
+            <figure className="mx-auto w-full max-w-sm overflow-hidden rounded-2xl border border-border bg-paper">
               <Image
-                src="/images/presenter.svg"
-                alt="Illustrated placeholder for Dr. Bennett, a fictional AI virtual presenter, not a real or licensed doctor."
-                width={600}
-                height={650}
+                src={site.images.presenter.src}
+                alt={site.images.presenter.alt}
+                width={site.images.presenter.width}
+                height={site.images.presenter.height}
                 sizes="(max-width: 767px) 85vw, 35vw"
                 className="h-auto w-full"
               />
-              <span className="absolute right-4 bottom-4 left-4 rounded-lg bg-paper px-4 py-3 text-center text-[18px] font-bold">
-                An AI presenter, with a clear purpose
-              </span>
-            </div>
+              <figcaption className="px-5 py-4 text-center text-[18px] text-muted">
+                {site.presenterImageDisclosure}
+              </figcaption>
+            </figure>
             <div>
               <p className="eyebrow mb-4 text-forest">
                 A familiar face. An honest introduction.
