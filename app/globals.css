@@ -122,6 +122,18 @@ textarea::placeholder {
 .content-prose li {
   margin-block: 0.5rem;
 }
+.care-dialog {
+  width: min(36rem, calc(100vw - 2rem));
+  max-width: 36rem;
+  border: 1px solid #d5ddd1;
+  border-radius: 1rem;
+  background: #fffefa;
+  color: #273b32;
+  padding: 1.5rem;
+}
+.care-dialog::backdrop {
+  background: rgb(39 59 50 / 45%);
+}
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Script from "next/script";
 import { useEffect, useState, useSyncExternalStore } from "react";
+import { usePathname } from "next/navigation";
 
 const storageKey = "caregiving-desk-analytics-consent";
 const changeEvent = "caregiving-desk:analytics-change";
@@ -41,7 +42,9 @@ function serverConsent(): Consent {
 }
 
 export function AnalyticsPreferencesButton() {
-  if (!configured) return null;
+  const pathname = usePathname() || "";
+  const onCareDesk = pathname === "/care" || pathname.startsWith("/care/");
+  if (!configured || onCareDesk) return null;
   return (
     <button
       type="button"
@@ -54,6 +57,8 @@ export function AnalyticsPreferencesButton() {
 }
 
 export function Analytics() {
+  const pathname = usePathname() || "";
+  const onCareDesk = pathname === "/care" || pathname.startsWith("/care/");
   const consent = useSyncExternalStore(subscribe, readConsent, serverConsent);
   const [preferencesOpen, setPreferencesOpen] = useState(false);
 
@@ -80,7 +85,7 @@ export function Analytics() {
     }
   }
 
-  if (!configured) return null;
+  if (!configured || onCareDesk) return null;
 
   return (
     <>

@@ -43,6 +43,26 @@ export default function PrivacyPage() {
           ),
         },
         {
+          title: "Care desk records on your device",
+          content: (
+            <>
+              <p>
+                The care desk stores profiles, medicines, supplements, appointments,
+                tasks, and notes in this browser with IndexedDB. Those records stay on the
+                device and browser profile where you entered them. Caregiving Desk does
+                not upload them, automatically share them, or keep a backup.
+              </p>
+              <p>
+                Clearing site data, using another device, or a browser that blocks storage
+                can remove or hide them. Export a copy from the care desk if you want your
+                own file. Care desk pages do not send those records to analytics. The
+                organizer does not recommend medicines or change doses, and this notice
+                does not claim that the stored copy is encrypted.
+              </p>
+            </>
+          ),
+        },
+        {
           title: "How information is used",
           content: (
             <p>

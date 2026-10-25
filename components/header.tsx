@@ -7,6 +7,7 @@ import { Button, Container } from "@/components/ui";
 
 const links = [
   ["Home", "/"],
+  ["Care desk", "/care"],
   ["Tips", "/tips"],
   ["Shop", "/shop"],
   ["Free Fridge Sheet", "/free-fridge-sheet"],

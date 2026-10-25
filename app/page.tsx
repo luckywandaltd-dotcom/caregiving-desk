@@ -227,6 +227,23 @@ export default function HomePage() {
         </Container>
       </Section>
 
+      <Section className="pt-0">
+        <Container>
+          <div className="rounded-2xl border border-border bg-paper p-6 sm:p-10">
+            <p className="eyebrow mb-4 text-forest">On this device</p>
+            <h2 className="section-title">A care desk for everyday details.</h2>
+            <p className="mt-5 max-w-2xl text-muted">
+              Keep profiles, medicines you already use, appointments, tasks, and notes in
+              this browser. Records are not shared automatically, and the desk does not
+              give medical advice.
+            </p>
+            <Button href="/care" className="mt-7">
+              Open the care desk <span aria-hidden="true">→</span>
+            </Button>
+          </div>
+        </Container>
+      </Section>
+
       <Section className="border-y border-border bg-paper">
         <Container>
           <div className="mx-auto max-w-2xl text-center">

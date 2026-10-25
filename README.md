@@ -28,6 +28,12 @@ npm run start
 
 `npx tsc --noEmit` is equivalent to `npm run typecheck`. Run `npm run format` to apply Prettier formatting. Use `npm install` only when intentionally changing dependencies, and commit the resulting lockfile. The normal reproducible installation command is `npm ci`.
 
+## Care desk
+
+`/care` is an installable, on-device organizer for everyday care. It stores profiles, medicines and supplements you already use, appointments, checklist tasks, and notes in IndexedDB in the visitor’s browser. There is no account, cloud sync, payment, or notification service.
+
+Records are not uploaded or backed up by the site. Visitors can export JSON, import a care-desk export, or delete everything after confirmation. Medicine fields only store what someone types, including existing label instructions. The desk does not recommend medicines or doses. A service worker caches the care pages after an online visit so the interface and saved records can open offline. Care pages do not load analytics scripts.
+
 ## Structure
 
 ```text

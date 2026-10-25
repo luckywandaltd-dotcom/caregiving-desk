@@ -14,6 +14,14 @@ const coreRoutes = [
   "/privacy",
   "/terms",
   "/refund-policy",
+  "/care",
+  "/care/profiles",
+  "/care/medications",
+  "/care/appointments",
+  "/care/checklist",
+  "/care/notes",
+  "/care/resources",
+  "/care/data",
 ];
 const productRoutes = products.map(({ slug }) => `/shop/${slug}`);
 const tipRoutes = tips.map(({ slug }) => `/tips/${slug}`);

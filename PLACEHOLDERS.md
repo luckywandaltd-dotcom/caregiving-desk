@@ -81,6 +81,12 @@ All four pages display **Starter text – review with a professional before laun
 - [ ] `/terms`: fill the explicit effective date, required business details, governing jurisdiction, consumer notices, and professionally reviewed liability/dispute terms. Confirm the intended personal/family license.
 - [ ] `/refund-policy`: fill the explicit checkout provider, request route, eligibility/window, handling of duplicate/defective purchases, applicable digital cancellation rights, and effective date. Mandatory consumer rights must remain respected.
 
+## Care desk
+
+- [x] Offer an on-device care desk at `/care` with profiles, manually recorded medicines and supplements, appointments, a checklist, notes, resources, and export/import/delete controls.
+- [x] Keep those records in browser IndexedDB. Do not add an account, database, or sync service for them. Say clearly that they are device-specific and are not automatically shared or backed up.
+- [ ] A personal export file is the only backup. Do not claim encryption, clinical review, or regulatory compliance for this organizer.
+
 ## Final checks
 
 - [ ] Rebuild after updating content or public environment variables. Pass lint, type checking, formatting, and the production build.
