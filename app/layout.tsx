@@ -23,6 +23,10 @@ const lora = localFont({
   ],
   variable: "--font-lora",
   display: "swap",
+  // Times is the serif metric base. "Lora Adjusted" in globals.css covers
+  // systems where that local face is unavailable, using the same overrides.
+  adjustFontFallback: "Times New Roman",
+  fallback: ["'Lora Adjusted'"],
 });
 const atkinson = localFont({
   src: [

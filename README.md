@@ -52,7 +52,7 @@ The supplied character images were confirmed by the user as AI-generated brand a
 
 Edit the active character image paths, alt text, and original dimensions in `site.images` in `content/site.ts`:
 
-- `hero`: `/images/characters-outdoors.jpg` (720 × 1280), the outdoor group scene on Home.
+- `hero`: `/images/characters-outdoors-square.jpg` (720 × 720), the outdoor group scene on Home. It is the square portion of the supplied `characters-outdoors.jpg` (720 × 1280) that the page shows, so the browser does not download the cropped-away portrait. The original file stays in `public/images/`.
 - `presenter`: `/images/dr-bennett-portrait.jpg` (1086 × 1448), the portrait in “Meet Dr. Bennett.”
 - `about`: `/images/characters-clinic.jpg` (720 × 1280), the character introduction on About.
 

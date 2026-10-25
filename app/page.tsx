@@ -3,18 +3,23 @@ import Link from "next/link";
 import { Button, Container, Section } from "@/components/ui";
 import { ProductCard } from "@/components/product-card";
 import { TipCard } from "@/components/tip-card";
-import { EmailSignup } from "@/components/email-signup";
 import { products } from "@/content/products";
 import { tips } from "@/content/tips";
 import { site } from "@/content/site";
 import { fridgeSheet } from "@/content/resources";
 import { pageMetadata } from "@/lib/seo";
 
-export const metadata = pageMetadata(
-  "Simple tips for aging well",
-  "A warm place for older adults and family caregivers. Explore educational tips, thoughtful printables, and the free Parent’s Fridge Sheet. Dr. Bennett is an AI presenter.",
-  "/",
-);
+const homeTitle = "Simple tips for aging well";
+
+export const metadata = {
+  ...pageMetadata(
+    homeTitle,
+    "A warm place for older adults and family caregivers. Explore educational tips, thoughtful printables, and the free Parent’s Fridge Sheet. Dr. Bennett is an AI presenter.",
+    "/",
+  ),
+  // The root layout template does not apply to this page, so set the full title.
+  title: { absolute: `${homeTitle} | Caregiving Desk` },
+};
 
 export default function HomePage() {
   return (
@@ -28,7 +33,7 @@ export default function HomePage() {
                 For the everyday moments of care
               </p>
               <h1 className="font-serif text-[clamp(2.5rem,4.5vw,3.85rem)] leading-[1.14] tracking-[-0.045em]">
-                Simple, trusted health tips for aging well,{" "}
+                Simple, clear health tips for aging well,{" "}
                 <span className="text-forest">and for the families who care.</span>
               </h1>
               <p className="mt-7 max-w-xl text-xl leading-relaxed text-muted">
@@ -59,8 +64,8 @@ export default function HomePage() {
                   width={site.images.hero.width}
                   height={site.images.hero.height}
                   preload
-                  sizes="(max-width: 1023px) 90vw, 42vw"
-                  className="aspect-square w-full object-cover object-[50%_40%]"
+                  sizes="(max-width: 639px) calc(100vw - 2.5rem), (max-width: 1023px) calc(100vw - 4rem), min(42vw, 36rem)"
+                  className="aspect-square w-full object-cover"
                 />
               </div>
               <div className="relative mx-5 -mt-10 rounded-xl border border-border bg-paper px-6 py-5 shadow-[0_8px_30px_-15px_#273b3225] sm:mx-8">
@@ -107,7 +112,7 @@ export default function HomePage() {
           <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
             <div>
               <p className="eyebrow mb-3 text-forest">A little everyday guidance</p>
-              <h2 className="section-title">This week&apos;s tips</h2>
+              <h2 className="section-title">Latest tips</h2>
             </div>
             <Button href="/tips" variant="text" className="px-0">
               Explore all tips <span aria-hidden="true">→</span>
@@ -259,18 +264,6 @@ export default function HomePage() {
             >
               Learn about our AI presenters
             </Link>
-          </div>
-        </Container>
-      </Section>
-
-      <Section>
-        <Container>
-          <div className="mx-auto max-w-2xl">
-            <EmailSignup
-              source="home-band"
-              title="A little care, delivered."
-              description="New tips, useful printables, and a gentle reminder that you're not doing this alone."
-            />
           </div>
         </Container>
       </Section>
