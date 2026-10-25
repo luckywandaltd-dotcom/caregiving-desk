@@ -140,9 +140,6 @@ export default function HomePage() {
                 sizes="(max-width: 767px) 85vw, 35vw"
                 className="h-auto w-full"
               />
-              <figcaption className="px-5 py-4 text-center text-[18px] text-muted">
-                {site.presenterImageDisclosure}
-              </figcaption>
             </figure>
             <div>
               <p className="eyebrow mb-4 text-forest">

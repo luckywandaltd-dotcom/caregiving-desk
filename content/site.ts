@@ -9,8 +9,6 @@ export const site = {
     "Dr. Bennett is an AI virtual presenter, not a real person or a licensed doctor. George and Margaret are AI-generated fictional characters. Their images depict fictional scenes, not real patients, consultations, or testimonials.",
   characterImageDisclosure:
     "AI-generated fictional characters. Dr. Bennett is not a real or licensed doctor.",
-  presenterImageDisclosure:
-    "AI-generated portrait of a virtual presenter, not a real or licensed doctor.",
   images: {
     hero: {
       src: "/images/characters-outdoors.jpg",
