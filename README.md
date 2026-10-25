@@ -1,6 +1,6 @@
 # Caregiving Desk
 
-A calm, accessible website for adults over 60 and the families who care for them. Caregiving Desk is a brand owned by Voice Of Peshawar LLC. Dr. Bennett is an AI virtual presenter, **not a real or licensed doctor**. The site provides education only, not medical advice.
+A calm, accessible website for adults over 60 and the families who care for them. Dr. Bennett is an AI virtual presenter, **not a real or licensed doctor**. The site provides education only, not medical advice.
 
 Built with Next.js App Router, strict TypeScript, Tailwind CSS, and editable local content. There is no CMS, database, on-site payment processing, or server-side credential requirement. All five initial products are coming soon; all three tip articles are clearly labelled examples. **Complete [PLACEHOLDERS.md](./PLACEHOLDERS.md) before public launch.**
 

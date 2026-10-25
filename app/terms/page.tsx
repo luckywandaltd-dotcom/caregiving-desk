@@ -17,11 +17,10 @@ export default function TermsPage() {
           title: "Who we are and what we offer",
           content: (
             <p>
-              Caregiving Desk is a brand owned by Voice Of Peshawar LLC. We provide
-              general educational content and printable planning tools for adults and
-              caregivers. Dr. Bennett is an AI virtual presenter, not a real or licensed
-              doctor. Our content is not medical, legal, financial, or other personalized
-              professional advice.
+              Caregiving Desk provides general educational content and printable planning
+              tools for adults and caregivers. Dr. Bennett is an AI virtual presenter, not
+              a real or licensed doctor. Our content is not medical, legal, financial, or
+              other personalized professional advice.
             </p>
           ),
         },

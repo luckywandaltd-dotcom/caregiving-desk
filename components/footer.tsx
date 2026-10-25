@@ -77,7 +77,7 @@ export function Footer() {
           </nav>
         </div>
         <p className="mt-8 text-[18px] text-muted">
-          © {new Date().getUTCFullYear()} {site.name}. A brand of {site.owner}.
+          © {new Date().getUTCFullYear()} {site.name}.
         </p>
       </Container>
     </footer>

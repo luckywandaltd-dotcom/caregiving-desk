@@ -5,9 +5,9 @@ The codebase includes intentional launch placeholders. A successful build does n
 ## Brand and website identity
 
 - [ ] Set `NEXT_PUBLIC_SITE_URL` to the actual HTTPS site origin. Replace the `https://example.com` fallback for canonical URLs, sitemap, structured data, and social metadata.
-- [ ] Verify Voice Of Peshawar LLC's business details and the public brand description in `content/site.ts`.
+- [ ] Review required business details for the legal pages and the public brand description in `content/site.ts`. Do not add owner or geographic attribution without approved public copy.
 - [ ] Confirm the supplied social handles and their destinations: Instagram `@caregivingdesk`, X `@caregiverdesk`, TikTok `@luckywandallc`, YouTube `@Caregivingdesk`.
-- [ ] Keep Dr. Bennett's AI-presenter disclosure everywhere. George and Margaret are AI-generated fictional characters, not real patients or people giving testimonials.
+- [ ] Keep Dr. Bennett's AI-presenter description accurate on About and in character introductions. George and Margaret are AI-generated fictional characters, not real patients or people giving testimonials.
 
 ## Free Parent's Fridge Sheet and email signup
 

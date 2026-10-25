@@ -12,7 +12,7 @@
 
 ## Content rules
 
-- Caregiving Desk is owned by Voice Of Peshawar LLC. Dr. Bennett is an AI virtual presenter, not a real or licensed doctor. George and Margaret are AI-generated fictional characters. Their clinic and outdoor scenes are fictional, not photographs of real consultations or patients. Never imply actual clinical credentials, patients, endorsements, or testimonials, including in metadata and JSON-LD.
+- Use Caregiving Desk as the public brand. Do not add owner or geographic attribution without approved public copy. Dr. Bennett is an AI virtual presenter, not a real or licensed doctor. George and Margaret are AI-generated fictional characters. Their clinic and outdoor scenes are fictional, not photographs of real consultations or patients. Never imply actual clinical credentials, patients, endorsements, or testimonials, including in metadata and JSON-LD.
 - Content is education only. Do not diagnose, promise cures or miracle outcomes, use scare language, or advise someone to stop or change medicine. Tell readers to discuss personal health decisions with their doctor or pharmacist.
 - Use exact, relevant CDC, NIH, NIA, Mayo Clinic, or NHS source pages for health statements. Do not invent facts, statistics, sources, quotations, reviews, ratings, credentials, or sales figures.
 - Mark missing material with an obvious `PLACEHOLDER`. Keep the exact “EXAMPLE CONTENT – replace before launch” label on sample tips. A sample date is not proof of medical review.

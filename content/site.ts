@@ -1,10 +1,9 @@
 export const site = {
   name: "Caregiving Desk",
-  owner: "Voice Of Peshawar LLC",
   description:
     "Simple, education-only caregiving resources for older adults and the families who care. Meet Dr. Bennett, an AI virtual presenter, and explore printable tools for everyday care.",
   disclaimer:
-    "Dr. Bennett is an AI virtual presenter. Content is for education only and is not medical advice. Always talk to your doctor or pharmacist about your health.",
+    "Content is for education only and is not medical advice. Always talk to your doctor or pharmacist about your health.",
   presenterDisclosure:
     "Dr. Bennett is an AI virtual presenter, not a real person or a licensed doctor. George and Margaret are AI-generated fictional characters. Their images depict fictional scenes, not real patients, consultations, or testimonials.",
   characterImageDisclosure:

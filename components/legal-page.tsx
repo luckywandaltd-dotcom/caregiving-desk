@@ -27,10 +27,7 @@ export function LegalPage({
           <p className="font-semibold">
             Starter text – review with a professional before launch.
           </p>
-          <p className="mt-2 text-muted">
-            This page is a draft for Caregiving Desk, a brand owned by Voice Of Peshawar
-            LLC.
-          </p>
+          <p className="mt-2 text-muted">This page is a draft for Caregiving Desk.</p>
         </div>
         <p className="text-xl leading-relaxed text-muted">{introduction}</p>
         <div className="mt-10 space-y-10">

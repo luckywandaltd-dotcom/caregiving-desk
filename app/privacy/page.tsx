@@ -18,8 +18,8 @@ export default function PrivacyPage() {
           content: (
             <>
               <p>
-                Caregiving Desk is a brand owned by Voice Of Peshawar LLC. Use our contact
-                page for privacy questions once the contact service is enabled.
+                Use the Caregiving Desk contact page for privacy questions once the
+                contact service is enabled.
               </p>
               <p>
                 [PLACEHOLDER: add the business privacy contact, postal address where

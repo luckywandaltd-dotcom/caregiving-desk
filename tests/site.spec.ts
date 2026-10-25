@@ -19,7 +19,7 @@ const productRoutes = products.map(({ slug }) => `/shop/${slug}`);
 const tipRoutes = tips.map(({ slug }) => `/tips/${slug}`);
 const routes = [...coreRoutes, ...productRoutes, ...tipRoutes];
 const disclosure =
-  "Dr. Bennett is an AI virtual presenter. Content is for education only and is not medical advice. Always talk to your doctor or pharmacist about your health.";
+  "Content is for education only and is not medical advice. Always talk to your doctor or pharmacist about your health.";
 const legalNotice = "Starter text – review with a professional before launch.";
 
 async function readSchemas(page: Page) {

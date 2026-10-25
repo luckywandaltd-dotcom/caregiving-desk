@@ -91,7 +91,6 @@ export default function RootLayout({
             name: site.name,
             url: absoluteUrl(),
             description: site.description,
-            parentOrganization: { "@type": "Organization", name: site.owner },
             sameAs: site.socials.map(({ url }) => url),
             logo: absoluteUrl("/icon.svg"),
           }}

@@ -46,9 +46,8 @@ export default function AboutPage() {
               everyday planning easier to begin.
             </p>
             <p className="mt-5 leading-relaxed text-muted">
-              We are a brand owned by {site.owner}. We are building short educational tips
-              and practical printable tools, with room for the very human side of
-              caregiving.
+              We are building short educational tips and practical printable tools, with
+              room for the very human side of caregiving.
             </p>
           </div>
           <figure className="overflow-hidden rounded-[2rem] border border-border bg-paper">
