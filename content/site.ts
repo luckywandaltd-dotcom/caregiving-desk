@@ -10,10 +10,10 @@ export const site = {
     "AI-generated fictional characters. Dr. Bennett is not a real or licensed doctor.",
   images: {
     hero: {
-      src: "/images/characters-outdoors.jpg",
+      src: "/images/characters-outdoors-square.jpg",
       alt: "AI-generated scene of Dr. Bennett, George, and Margaret, fictional characters standing together outdoors.",
       width: 720,
-      height: 1280,
+      height: 720,
     },
     presenter: {
       src: "/images/dr-bennett-portrait.jpg",

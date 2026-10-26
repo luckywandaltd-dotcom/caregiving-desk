@@ -262,10 +262,24 @@ test("the mobile menu supports keyboard opening, Escape, and navigation", async 
   );
 });
 
-test("tip filtering changes results and supports an empty category", async ({ page }) => {
+test("tip filtering only lists categories that have articles", async ({ page }) => {
   await page.goto("/tips");
   const filter = page.getByRole("group", { name: "Filter tips by category" });
-  const category = tips[0].category;
+  const present = [...new Set(tips.map((tip) => tip.category))];
+  await expect(filter.getByRole("button")).toHaveCount(present.length + 1);
+  for (const category of present) {
+    await expect(
+      filter.getByRole("button", { name: category, exact: true }),
+    ).toBeVisible();
+  }
+  for (const category of ["Myth vs Fact", "Seasonal"] as const) {
+    if (!present.includes(category)) {
+      await expect(
+        filter.getByRole("button", { name: category, exact: true }),
+      ).toHaveCount(0);
+    }
+  }
+  const category = present[0];
   await filter.getByRole("button", { name: category, exact: true }).click();
   await expect(
     filter.getByRole("button", { name: category, exact: true }),
@@ -274,10 +288,7 @@ test("tip filtering changes results and supports an empty category", async ({ pa
     tips.filter((tip) => tip.category === category).length,
   );
   await expect(page.getByRole("status")).toContainText(category);
-  await filter.getByRole("button", { name: "Seasonal", exact: true }).click();
-  await expect(page.getByRole("main").getByRole("article")).toHaveCount(0);
-  await expect(page.getByRole("status")).toContainText("0 tips");
-  await page.getByRole("button", { name: "See all tips" }).click();
+  await filter.getByRole("button", { name: "All tips", exact: true }).click();
   await expect(page.getByRole("main").getByRole("article")).toHaveCount(tips.length);
 });
 

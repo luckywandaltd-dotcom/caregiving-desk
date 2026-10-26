@@ -6,6 +6,9 @@ import { TipCard } from "@/components/tip-card";
 
 export function TipFilter({ tips }: { tips: Tip[] }) {
   const [selected, setSelected] = useState<string>("All tips");
+  const availableCategories = categories.filter((category) =>
+    tips.some((tip) => tip.category === category),
+  );
   const visible =
     selected === "All tips" ? tips : tips.filter((tip) => tip.category === selected);
 
@@ -16,7 +19,7 @@ export function TipFilter({ tips }: { tips: Tip[] }) {
         role="group"
         aria-label="Filter tips by category"
       >
-        {["All tips", ...categories].map((category) => (
+        {["All tips", ...availableCategories].map((category) => (
           <button
             key={category}
             type="button"

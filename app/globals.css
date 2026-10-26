@@ -1,6 +1,17 @@
 @import "tailwindcss";
 @config "../tailwind.config.ts";
 
+/* Keep Lora's line count before the webfont arrives. Overrides match
+   next/font's Times New Roman adjustment for Lora Latin 400. */
+@font-face {
+  font-family: "Lora Adjusted";
+  src: local("Times New Roman"), local("Tinos"), local("Liberation Serif");
+  size-adjust: 114.93%;
+  ascent-override: 87.53%;
+  descent-override: 23.84%;
+  line-gap-override: 0%;
+}
+
 :root {
   color-scheme: light;
   --background: #f8f7f2;

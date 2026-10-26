@@ -56,7 +56,7 @@ All initial tips carry **EXAMPLE CONTENT – replace before launch**. None suppl
 The user has supplied and approved AI-generated brand images for Dr. Bennett, George, and Margaret. Their realistic appearance does not represent actual medical credentials, patients, consultations, or testimonials. Preserve the visible AI disclosures and accurate alt text when using them.
 
 - [x] Replace the character illustration placeholders with the user-approved AI-generated images.
-- Active images are `characters-outdoors.jpg` on Home, `dr-bennett-portrait.jpg` in “Meet Dr. Bennett,” and `characters-clinic.jpg` on About. Their paths, alt text, and dimensions are editable through `site.images` in `content/site.ts`.
+- Active images are `characters-outdoors-square.jpg` on Home (a 720 × 720 crop of the supplied `characters-outdoors.jpg`, which is still kept), `dr-bennett-portrait.jpg` in “Meet Dr. Bennett,” and `characters-clinic.jpg` on About. Their paths, alt text, and dimensions are editable through `site.images` in `content/site.ts`.
 - The supplied `dr-bennett-outdoors.jpg` and `characters-conversation.jpg` originals are retained for future use; they are not missing launch assets.
 - [ ] Keep the AI-generated nature clear beside character images, including the fictional clinic scenes.
 - [x] Replace `fridge-sheet.svg` with `fridge-sheet-preview.png`, a faithful first-page preview of the supplied two-page printable.
