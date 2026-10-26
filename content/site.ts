@@ -28,6 +28,12 @@ export const site = {
       width: 720,
       height: 1280,
     },
+    symbol: {
+      src: "/images/care-desk-symbol.jpg",
+      alt: "AI-generated portrait used as the Care desk symbol. Dr. Bennett is a fictional virtual presenter, not a real or licensed doctor.",
+      width: 1500,
+      height: 844,
+    },
   },
   socials: [
     {

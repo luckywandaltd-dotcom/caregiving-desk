@@ -1,8 +1,10 @@
 "use client";
 
+import Image from "next/image";
 import { Button } from "@/components/ui";
 import { useCare } from "@/components/care/store";
 import { CareLink, EmptyState } from "@/components/care/ui";
+import { site } from "@/content/site";
 import { formatDay, localISODate, profileLabel } from "@/lib/care/model";
 
 export function DashboardView() {
@@ -25,7 +27,20 @@ export function DashboardView() {
   return (
     <div className="space-y-8">
       <div>
-        <h1 className="font-serif text-4xl leading-tight">Today</h1>
+        <div className="flex items-center gap-4">
+          <figure className="shrink-0">
+            <Image
+              src={site.images.symbol.src}
+              alt={site.images.symbol.alt}
+              width={site.images.symbol.width}
+              height={site.images.symbol.height}
+              className="h-20 w-20 rounded-full border border-border object-cover object-[center_30%]"
+            />
+            <figcaption className="sr-only">Care desk symbol</figcaption>
+          </figure>
+          <h1 className="font-serif text-4xl leading-tight">Today</h1>
+        </div>
+        <p className="mt-3 max-w-3xl text-muted">{site.characterImageDisclosure}</p>
         <p className="mt-3 max-w-3xl text-muted">
           A simple place for the details you already have. Education only. This desk does
           not give medical advice, recommend medicines, or change doses.

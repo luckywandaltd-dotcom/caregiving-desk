@@ -30,6 +30,7 @@ const cachePaths = [
   "/care/icon-192.png",
   "/care/icon-512.png",
   "/care/icon-maskable-512.png",
+  "/images/care-desk-symbol.jpg",
 ];
 
 function OfflineRegistration() {
