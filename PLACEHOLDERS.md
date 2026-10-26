@@ -37,7 +37,7 @@ Every entry in `content/products.ts` starts as `coming-soon`. Verify all descrip
 
 ## Three example tip articles
 
-All initial tips carry **EXAMPLE CONTENT – replace before launch**. None supplies reviewed health guidance. Their sample dates are not dates of medical or source review.
+All initial tips carry **EXAMPLE CONTENT – replace before launch**. None supplies reviewed health guidance. Their sample dates are not dates of medical or source review. The homepage shows separate short examples under these three cards (`content/homepage-examples.ts`). Those lines do not replace the articles.
 
 | Slug                              | Missing source field                     |
 | --------------------------------- | ---------------------------------------- |
