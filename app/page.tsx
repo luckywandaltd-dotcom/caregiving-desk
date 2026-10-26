@@ -77,10 +77,7 @@ export default function HomePage() {
                 </p>
               </div>
               <figcaption className="mt-4 text-center text-[18px] text-muted">
-                <span className="mb-1 block font-bold text-forest">
-                  Dr. Bennett, George &amp; Margaret
-                </span>
-                {site.characterImageDisclosure}
+                {site.presenterIntroduction}
               </figcaption>
             </figure>
           </div>
@@ -150,15 +147,14 @@ export default function HomePage() {
               <p className="eyebrow mb-4 text-forest">
                 A familiar face. An honest introduction.
               </p>
-              <h2 className="section-title">Meet Dr. Bennett</h2>
+              <h2 className="section-title">{site.presenterIntroduction}</h2>
               <p className="mt-6 text-xl">
                 A friendly guide to the little things that help families feel more
                 prepared.
               </p>
               <p className="mt-4 text-muted">
-                Dr. Bennett is an AI virtual presenter—not a real or licensed doctor.
-                Alongside our fictional couple, George and Margaret, he helps us share
-                simple educational content.
+                Explore simple educational resources and practical printables to support
+                the everyday moments of caring for a parent.
               </p>
               <p className="mt-4 text-muted">
                 Our editorial standard is to check health information against trusted

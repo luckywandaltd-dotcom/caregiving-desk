@@ -1,5 +1,6 @@
 export const site = {
   name: "Caregiving Desk",
+  presenterIntroduction: "Meet Dr. Bennett, your guide to everyday caregiving.",
   description:
     "Simple, education-only caregiving resources for older adults and the families who care. Meet Dr. Bennett, an AI virtual presenter, and explore printable tools for everyday care.",
   disclaimer:
