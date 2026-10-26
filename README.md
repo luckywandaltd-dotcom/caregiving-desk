@@ -48,7 +48,7 @@ Fonts are provided locally through `next/font` and the installed font packages, 
 
 ## Character imagery
 
-The supplied character images were confirmed by the user as AI-generated brand artwork. Dr. Bennett, George, and Margaret are fictional characters; the clinic scenes do not show actual consultations or patients. Keep the visible AI disclosure beside realistic character images, their descriptive alt text, and the exact site-wide education-only disclaimer when editing their presentation.
+The supplied character images were confirmed by the user as AI-generated brand artwork. Dr. Bennett, George, and Margaret are fictional characters; the clinic scenes do not show actual consultations or patients. Keep the visible AI disclosure beside realistic character images on About, the descriptive alt text on every character image, and the exact site-wide education-only disclaimer when editing their presentation.
 
 Edit the active character image paths, alt text, and original dimensions in `site.images` in `content/site.ts`:
 
@@ -56,7 +56,7 @@ Edit the active character image paths, alt text, and original dimensions in `sit
 - `presenter`: `/images/dr-bennett-portrait.jpg` (1086 × 1448), the portrait in “Meet Dr. Bennett.”
 - `about`: `/images/characters-clinic.jpg` (720 × 1280), the character introduction on About.
 
-The other two supplied originals are retained in `public/images/` for future use: `dr-bennett-outdoors.jpg` (720 × 1280) and `characters-conversation.jpg` (1920 × 1280). All five JPEG files preserve the supplied originals; `next/image` generates optimized delivery formats, while responsive page styles control their visible framing. When replacing an image, update its path, accurate dimensions, and alt text together. Character image captions use `site.characterImageDisclosure`; the adjacent presenter introduction is edited in `app/page.tsx`.
+The other two supplied originals are retained in `public/images/` for future use: `dr-bennett-outdoors.jpg` (720 × 1280) and `characters-conversation.jpg` (1920 × 1280). All five JPEG files preserve the supplied originals; `next/image` generates optimized delivery formats, while responsive page styles control their visible framing. When replacing an image, update its path, accurate dimensions, and alt text together. The About character image caption uses `site.characterImageDisclosure`. The homepage hero names the characters and keeps their AI-generated description in the image alt text. The Meet Dr. Bennett introduction is edited in `app/page.tsx`.
 
 The Fridge Sheet preview at `public/images/fridge-sheet-preview.png` is a faithful rendering of the supplied PDF's first page, used on Home and the free-sheet page. Product covers, tip artwork, and the default social card remain separate, replaceable placeholders. See `PLACEHOLDERS.md` for what still needs review before launch.
 

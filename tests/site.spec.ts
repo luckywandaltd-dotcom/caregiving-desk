@@ -1,6 +1,7 @@
 import { expect, test, type Page } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
 import { products } from "../content/products";
+import { site } from "../content/site";
 import { tips } from "../content/tips";
 
 const coreRoutes = [
@@ -361,6 +362,33 @@ test("example tips show placeholders and never invent a medical author or source
     expect(article).not.toHaveProperty("reviewedBy");
     expect(article).not.toHaveProperty("datePublished");
   }
+});
+
+test("the homepage hero names the characters without the shared image caption", async ({
+  page,
+}) => {
+  await page.goto("/");
+  const hero = page.locator("main figure").first();
+  await expect(hero.locator("img")).toHaveAttribute("alt", site.images.hero.alt);
+  await expect(hero).toContainText("Dr. Bennett, George & Margaret");
+  await expect(hero).not.toContainText(site.characterImageDisclosure);
+  await expect(page.getByRole("main")).toContainText(
+    "Dr. Bennett is an AI virtual presenter—not a real or licensed doctor.",
+  );
+  await expect(page.getByRole("contentinfo")).toContainText(disclosure);
+
+  await page.goto("/about");
+  await expect(page.getByRole("main")).toContainText(site.characterImageDisclosure);
+  await expect(page.getByRole("main")).toContainText(
+    "not a real person, a licensed doctor",
+  );
+  await expect(page.getByRole("contentinfo")).toContainText(disclosure);
+
+  await page.goto("/medical-disclaimer");
+  await expect(page.getByRole("main")).toContainText(
+    "Dr. Bennett is a fictional AI virtual presenter, not a real or licensed doctor.",
+  );
+  await expect(page.getByRole("contentinfo")).toContainText(disclosure);
 });
 
 test("legal pages retain the starter-text notice and About explains the AI presenter", async ({
