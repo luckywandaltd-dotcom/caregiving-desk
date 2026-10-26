@@ -77,10 +77,9 @@ export default function HomePage() {
                 </p>
               </div>
               <figcaption className="mt-4 text-center text-[18px] text-muted">
-                <span className="mb-1 block font-bold text-forest">
+                <span className="block font-bold text-forest">
                   Dr. Bennett, George &amp; Margaret
                 </span>
-                {site.characterImageDisclosure}
               </figcaption>
             </figure>
           </div>
