@@ -1,5 +1,6 @@
 import { expect, test, type Page } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
+import { homepageExamples } from "../content/homepage-examples";
 import { products } from "../content/products";
 import { site } from "../content/site";
 import { tips } from "../content/tips";
@@ -387,6 +388,38 @@ test("the homepage hero names the characters without the shared image caption", 
   await page.goto("/medical-disclaimer");
   await expect(page.getByRole("main")).toContainText(
     "Dr. Bennett is a fictional AI virtual presenter, not a real or licensed doctor.",
+  );
+  await expect(page.getByRole("contentinfo")).toContainText(disclosure);
+});
+
+test("homepage topic cards show sourced examples without replacing the articles", async ({
+  page,
+}) => {
+  await page.goto("/");
+  const main = page.getByRole("main");
+  await expect(main).toContainText("EXAMPLE CONTENT – replace before launch");
+  await expect(main).toContainText(
+    "The short lines under each card are separate examples for learning.",
+  );
+  for (const group of homepageExamples) {
+    await expect(
+      main.getByRole("heading", { name: `Examples for ${group.category}` }),
+    ).toBeVisible();
+    for (const example of group.examples) {
+      await expect(main).toContainText(example.text);
+      if (example.fictional) await expect(main).toContainText("Fictional example.");
+      if (example.source) {
+        const link = main.locator(`a[href="${example.source.url}"]`).first();
+        await expect(link).toBeVisible();
+        await expect(link).toHaveAttribute("href", example.source.url);
+      }
+    }
+    for (const source of group.safetySources ?? []) {
+      await expect(main.locator(`a[href="${source.url}"]`).first()).toBeVisible();
+    }
+  }
+  await expect(main).toContainText(
+    "Stop if activity causes dizziness, chest pain or pressure, or nausea.",
   );
   await expect(page.getByRole("contentinfo")).toContainText(disclosure);
 });

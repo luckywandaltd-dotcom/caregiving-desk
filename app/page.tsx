@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Button, Container, Section } from "@/components/ui";
 import { ProductCard } from "@/components/product-card";
 import { TipCard } from "@/components/tip-card";
+import { TopicExamples } from "@/components/topic-examples";
 import { products } from "@/content/products";
 import { tips } from "@/content/tips";
 import { site } from "@/content/site";
@@ -119,14 +120,18 @@ export default function HomePage() {
           </div>
           <p className="mb-8 max-w-3xl text-muted">
             A preview of what&apos;s to come. These example articles are placeholders
-            awaiting sourced content before launch.
+            awaiting sourced content before launch. The short lines under each card are
+            separate examples for learning. They are not personal medical advice.
           </p>
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid items-start gap-8 md:grid-cols-3">
             {[...tips]
               .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt))
               .slice(0, 3)
               .map((tip) => (
-                <TipCard key={tip.slug} tip={tip} />
+                <div key={tip.slug} className="flex flex-col gap-5">
+                  <TipCard tip={tip} />
+                  <TopicExamples category={tip.category} />
+                </div>
               ))}
           </div>
         </Container>
